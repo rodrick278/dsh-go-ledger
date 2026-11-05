@@ -21,6 +21,17 @@ dsh plugin --profile web add @rodrick278/dsh-go-ledger
 
 需要 DSH Go 1.0.10 及以上（选图用到 `files` 能力）。
 
+### 直接从 GitHub 装（不上架也可以用）
+
+```sh
+git clone https://github.com/rodrick278/dsh-go-ledger.git
+dsh plugin --profile web add ./dsh-go-ledger
+```
+
+装完在 App 的「引擎」页重启引擎。插件第一次加载会自己生成 `ledger` 命令并写入 `ledger` 技能。
+
+账本数据不在仓库里：换手机要单独把 `$DSH_HOME/dsh-go/ledger/records.json` 带过去，不要把账目推到公开仓库。
+
 ## 数据
 
 - 账本：`$DSH_HOME/dsh-go/ledger/records.json`
