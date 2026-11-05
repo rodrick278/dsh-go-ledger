@@ -1,0 +1,63 @@
+{
+  "name": "@rodrick278/dsh-go-ledger",
+  "version": "0.1.0",
+  "description": "DSH Go 收支记账插件：手动记一笔、截图识别入账、按天流水",
+  "license": "MIT",
+  "author": "rodrick278",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "bin",
+    "skill",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-go",
+    "dsh",
+    "ledger",
+    "bookkeeping",
+    "记账"
+  ],
+  "homepage": "https://github.com/rodrick278/dsh-go-ledger#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrick278/dsh-go-ledger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodrick278/dsh-go-ledger/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "minApp": "1.0.10",
+    "title": { "zh": "记账", "en": "Ledger" },
+    "icon": "money",
+    "capabilities": ["files"],
+    "contributes": {
+      "composer.actions": [
+        { "id": "add", "label": "记一笔", "icon": "money" }
+      ],
+      "composer.strip": [
+        { "id": "today", "icon": "money" }
+      ],
+      "panels": [
+        {
+          "id": "ledger",
+          "title": "记账",
+          "icon": "money",
+          "placement": ["session.tab", "chat.panel", "features"]
+        }
+      ]
+    }
+  }
+}

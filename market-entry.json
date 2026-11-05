@@ -1,0 +1,12 @@
+{
+  "name": "@rodrick278/dsh-go-ledger",
+  "version": "0.1.0",
+  "title": { "zh": "记账", "en": "Ledger" },
+  "summary": {
+    "zh": "收支记账：手动记一笔、截图识别入账、按天看流水",
+    "en": "Track income and expenses, import receipts from screenshots, review daily totals"
+  },
+  "category": "productivity",
+  "screenshots": [],
+  "homepage": "https://github.com/rodrick278/dsh-go-ledger"
+}
